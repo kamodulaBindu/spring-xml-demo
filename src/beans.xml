@@ -4,20 +4,22 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                             https://www.Springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="actor1" class="com.stackroute.domain.Actor" >
+<bean name="actor" class="com.stackroute.domain.Actor" autowire="byName" >
     <constructor-arg name="name" value="Bindu"/>
     <constructor-arg name="gender" value="Female"/>
     <constructor-arg name="age" value="21"/>
 </bean>
-    <bean id="actor2" class="com.stackroute.domain.Actor">
+    <bean id="actor1" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="Hello" />
         <constructor-arg name="gender" value="Female"/>
         <constructor-arg name="age" value="21" />
     </bean>
-    <bean id="actor3" class="com.stackroute.domain.Actor">
+    <bean id="actor2" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="cat"/>
         <constructor-arg name="gender" value="Male"/>
         <constructor-arg name="age" value="21"/>
+    </bean>
+    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName" >
     </bean>
     <bean id="movie1" class="com.stackroute.domain.Movie"  >
         <constructor-arg name="actor" ref="actor1"/>
