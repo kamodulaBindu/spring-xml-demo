@@ -23,6 +23,8 @@ public class Main {
         movie1.actorInformation();
 
         BeanLifeCycleDemoBean beanLifeCycleDemoBean = context.getBean("beanLifeCycle", BeanLifeCycleDemoBean.class);
+
+        BeanPostProcessorDemoBean beanPostProcessorDemoBean = context.getBean("beanPostProcessorDemoBean", BeanPostProcessorDemoBean.class);
         context.close();
     }
 }

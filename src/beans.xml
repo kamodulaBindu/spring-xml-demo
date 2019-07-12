@@ -20,6 +20,7 @@
         <constructor-arg name="age" value="21"/>
     </bean>
     <bean id="beanLifeCycle" class="com.stackroute.domain.BeanLifeCycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>
+    <bean id="beanPostProcessorDemoBean" class="com.stackroute.domain.BeanPostProcessorDemoBean"/>
     <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName" >
     </bean>
     <bean id="movie1" class="com.stackroute.domain.Movie"  >
