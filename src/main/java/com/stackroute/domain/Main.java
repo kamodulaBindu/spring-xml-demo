@@ -12,15 +12,18 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.FileSystemResource;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
 
     ApplicationContext context = new ClassPathXmlApplicationContext("file:src/beans.xml");
-    Movie movie = context.getBean("movie1", Movie.class);
+    Movie movie = context.getBean("movie", Movie.class);
     movie.actorInformation();
-        Movie movie1 = context.getBean("movie2", Movie.class);
-        movie.actorInformation();
-        System.out.println(movie==movie1);
+
+
+        Movie movie1 = context.getBean("movie1", Movie.class);
+        movie1.actorInformation();
+
 
     }
 }
